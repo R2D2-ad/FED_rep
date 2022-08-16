@@ -1,0 +1,14 @@
+/* Stylesheet practice Week_1 */
+
+*{
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+
+body {
+    font-size: medium;
+    margin-left: 10px;
+    margin-right: 40px; 
+}
+
