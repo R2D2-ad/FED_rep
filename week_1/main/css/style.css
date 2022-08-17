@@ -1,11 +1,46 @@
 /* Stylesheet */
 
 *{
-
+font-family: Arial, Helvetica, sans-serif;
+background-color: rgb(240, 234, 226);
 }
 
 body {
+font-size: medium;
+margin: 15px;
+padding: 3px;
+color: rgb(77, 82, 134)
+}
 
+h1 {
+    float: right;
+    font-weight: 100;
+    font-size: 25px;
+    color: rgb(59, 59, 182);
+}
+
+h2 {
+    color: black;
+    font-size: 20px;
+    color: rgb(59, 59, 182);
+    margin-top: 45px;
+    padding: 5px;
+}
+
+nav {
+    padding-top: 55px;
+}
+
+div h2 {
+    padding-left: 25px;
+}
+
+nav div a {
+   margin: 4px; 
+}
+
+a {
+    text-decoration: none;
 }
 
 img {
@@ -13,4 +48,26 @@ img {
     max-width: 100%;
     height:auto;
     width: 25%
+}
+
+section {
+    margin-top: 5px;
+    padding: 15px;
+}
+
+section p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+figure img {
+    border-style: dashed;
+    border-color: rgb(77, 82, 134);
+    border-width: 1px;
+    width: 33%;
+}
+
+figcaption {
+    font-size: 14px;
+    font-style: italic;
 }
