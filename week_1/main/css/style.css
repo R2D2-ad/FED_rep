@@ -3,6 +3,7 @@
 *{
 font-family: Arial, Helvetica, sans-serif;
 background-color: rgb(240, 234, 226);
+box-sizing: border-box;
 }
 
 body {
@@ -20,11 +21,9 @@ h1 {
 }
 
 h2 {
-    color: black;
     font-size: 20px;
-    color: rgb(59, 59, 182);
-    margin-top: 45px;
-    padding: 5px;
+    margin-top: 25px;
+    padding: 10px;
 }
 
 nav {
@@ -43,31 +42,32 @@ a {
     text-decoration: none;
 }
 
-img {
-    border-radius: 5%;
-    max-width: 100%;
-    height:auto;
-    width: 25%
-}
-
-section {
-    margin-top: 5px;
-    padding: 15px;
-}
-
-section p {
-    font-size: 20px;
-    font-weight: bold;
-}
-
 figure img {
+    border-radius: 5%;
     border-style: dashed;
     border-color: rgb(77, 82, 134);
     border-width: 1px;
-    width: 33%;
+    max-width: 100%;
+    height:auto;
+    width: 25%;
+}
+
+div img {
+    border-radius: 5%;
+    border-style: dashed;
+    border-color: rgb(77, 82, 134);
+    border-width: 1px;
+    max-width: 100%;
+    height:auto;
+    width: 25%;
 }
 
 figcaption {
     font-size: 14px;
     font-style: italic;
 }
+
+ol p{
+    margin-top: 3px;
+}
+
