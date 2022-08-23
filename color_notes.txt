@@ -1,4 +1,0 @@
-color base: rgb(77, 82, 134)
-h2: rgb(59, 59, 182);
-background-color: rgb(240, 234, 226); on *
-

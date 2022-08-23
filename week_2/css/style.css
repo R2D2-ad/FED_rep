@@ -1,0 +1,123 @@
+/* Stylesheet for Project Week 2 */
+*{
+    margin: 2px;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+/* @font-face {
+    font-family: "RobotoRegular";
+    src: url('fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+} */
+
+body {
+    font-family: 'Roboto',sans-serif;
+}
+
+ /******* Header *******/
+header{
+    height: 100px;
+    background-color: #1F2937;
+    color:#F9FAF8;
+    font-weight: bold;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0px;
+    padding: 5px 80px;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+}
+
+ul li a {
+    text-decoration: none;
+    color:#F9FAF8;
+    font-weight: 300;
+    font-size: 18px;
+    padding: 0 0px 0px 10px;
+}
+
+/******* First section *******/
+section.content-first {
+    display: flex;
+    /* border: 2px solid pink; */
+    justify-content: space-between;
+    background-color: #1F2937;
+    margin-top: 0px;
+    padding: 5px 80px 70px;
+}
+
+div.content-left h1 {
+    font-size: 48px;
+    font-weight: 900;
+    color: #F9FAF8;
+    width: 40%;
+}
+
+div.content-left p{
+    color: #E5E7EB;
+    font-size: 18px;
+    width: 55%;
+    border: 2px solid lightcoral;
+}
+
+div.content-left button {
+    color:#E5E7EB;
+    background-color: #3882F6;
+    padding: 5px 18px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+div.content-right {
+    width: 50%;
+    height: auto;
+    border: 2px solid red;
+    padding: 10px 90px;
+}
+/******* Second section *******/
+section.content-second {
+    display: flex;
+    border: 2px solid orange;
+    justify-content: space-between;
+}
+
+section > h2{
+    color: red;
+}
+
+/******* Third section *******/
+section.content-third {
+    display: flex;
+    border: 2px solid green;
+    justify-content: center;
+}
+
+/******* Fourth section *******/
+section.content-fourth {
+    display: flex;
+    border: 2px solid lightblue;
+    justify-content: space-around;
+    padding: 10px 300px 10px 150px;
+}
+
+footer {
+    display: flex;
+    background-color: #1F2937;
+    justify-content: center;
+    padding: 30px 40px;
+    margin-top: 150px;
+}
+
+footer p {
+    color:#F9FAF8;
+    font-size: 13px;
+    font-weight: 600;
+}
+
