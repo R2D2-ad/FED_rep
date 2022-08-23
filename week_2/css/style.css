@@ -1,4 +1,4 @@
-/* Stylesheet for Project Week 2 */
+/* -------Stylesheet for Project Week 2 -------*/
 *{
     margin: 2px;
     padding: 2px;
@@ -16,7 +16,7 @@ body {
     font-family: 'Roboto',sans-serif;
 }
 
- /******* Header *******/
+ /* ------- Header ------- */
 header{
     height: 100px;
     background-color: #1F2937;
@@ -43,7 +43,7 @@ ul li a {
     padding: 0 0px 0px 10px;
 }
 
-/******* First section *******/
+/* ------- First section ------- */
 section.content-first {
     display: flex;
     /* border: 2px solid pink; */
@@ -83,7 +83,7 @@ div.content-right {
     border: 2px solid red;
     padding: 10px 90px;
 }
-/******* Second section *******/
+/* ------- Second section ------- */
 section.content-second {
     display: flex;
     border: 2px solid orange;
@@ -97,31 +97,61 @@ section > h2{
     /* letter-spacing: 1px; */
 }
 
-/******* Third section *******/
+/* ------- Third section ------- */
 section.content-third {
     display: flex;
     border: 2px solid green;
     justify-content: center;
+    background-color: #E5E7EB;
+    padding: 60px;
+    margin: 60px 20px;
 }
 
-/******* Fourth section *******/
+.quote {
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 300;
+    color: #1F2937;
+}
+
+div.quote {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+div.quote span {
+    color: #1F2937;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: end;
+}
+
+/* ------- Fourth section ------- */
 section.content-fourth {
     display: flex;
-    border: 2px solid lightblue;
+    border: 3px solid black;
     justify-content: space-around;
     padding: 20px 10px;
     background-color: #3882F6;
-    align-items: flex-start;
-    margin: 55px 250px 5px 250px;
+    align-items: center;
+    margin: 35px 250px;
+    height: 120px;
     border-radius: 10px;
 }
+
+div.call-action {
+    flex-basis: 400px;
+    border: 2px solid blueviolet;
+}
+
 div.call-action p {
     color:#E5E7EB;
     font-weight: bold;
     font-size: 15px;
 }
 
-span {
+div.call-action span {
     font-size: 12px;
     color:#E5E7EB;
 }
@@ -135,7 +165,7 @@ button {
     border: 1px solid #E5E7EB ;
     background-color: #3882F6;
 }
-
+/* ----------------------------------------------------- */
 footer {
     display: flex;
     background-color: #1F2937;
