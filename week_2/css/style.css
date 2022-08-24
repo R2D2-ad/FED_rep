@@ -1,5 +1,5 @@
 /* -------Stylesheet for Project Week 2 -------*/
-*{
+* {
     margin: 2px;
     padding: 2px;
     box-sizing: border-box;
@@ -17,7 +17,7 @@ body {
 }
 
  /* ------- Header ------- */
-header{
+header {
     height: 100px;
     background-color: #1F2937;
     color:#F9FAF8;
@@ -37,7 +37,7 @@ ul {
 
 ul li a {
     text-decoration: none;
-    color:#F9FAF8;
+    color: #E5E7EB;
     font-weight: 300;
     font-size: 18px;
     padding: 0 0px 0px 10px;
@@ -50,10 +50,10 @@ section.content-first {
     justify-content: space-between;
     background-color: #1F2937;
     margin-top: 0px;
-    padding: 5px 80px 70px;
+    padding: 4px 80px 70px;
 }
 
-div.content-left{
+div.content-left {
     width: 40%;
 }
 
@@ -87,14 +87,19 @@ div.content-right {
 section.content-second {
     display: flex;
     border: 2px solid orange;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
 }
 
-section > h2{
+section > h2 {
     color: #1F2937;
     font-size: 36px;
     font-weight:900;
-    /* letter-spacing: 1px; */
+}
+
+section.content-second figure {
+    align-self: center;
 }
 
 /* ------- Third section ------- */
