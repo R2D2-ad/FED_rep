@@ -21,8 +21,9 @@
 body {
     font-family: 'Roboto-Regular',sans-serif;
 }
-/* ------------------------------ */
-/* ------- Header section ------- */
+/* ----------------------------------------------------------------
+	Header
+-----------------------------------------------------------------*/
 header {
     height: 100px;
     background-color: #1F2937;
@@ -56,8 +57,9 @@ ul li a {
     margin: 5px 10px;
     border-radius: 50%;
 }
-/* ------------------------------ */
-/* ------- First section ------- */
+/* ----------------------------------------------------------------
+	Section 1
+-----------------------------------------------------------------*/
 section.content-first {
     display: flex;
     /* border: 2px solid pink; */
@@ -102,22 +104,20 @@ div.content-right {
     width: 50%;
     margin: 2px 10px;
 }
-/* ------------------------------ */
-/* ------- Second section ------- */
+/* ----------------------------------------------------------------
+	Section 2
+-----------------------------------------------------------------*/
+
 .content-sec-img {
     display: flex;
     justify-content: center;
-    margin: 0px 80px;
-}
-
-figure {
-    width: 50%;
+    margin: 0px 200px 0px;
 }
 
 figure img {
-    width: 300px;
+    width: 200px;
     margin-top: 15px;
-    height: 300px;
+    height: 200px;
     border-radius: 20%;
     object-fit:cover;
     /* object-position: right; */
@@ -136,10 +136,11 @@ figcaption {
     font-size: 12px;
     font-weight: 700;
     text-align: center;
-    margin-right: 150px;
+    /* margin-right: 150px; */
 }
-/* ------------------------------ */
-/* ------- Third section ------- */
+/* ----------------------------------------------------------------
+	Section 3
+-----------------------------------------------------------------*/
 section.content-third {
     display: flex;
     /* border: 2px solid green; */
@@ -167,8 +168,9 @@ div.quote span {
     font-weight: bold;
     text-align: end;
 }
-/* ------------------------------ */
-/* ------- Fourth section ------- */
+/* ----------------------------------------------------------------
+	Section 4
+-----------------------------------------------------------------*/
 section.content-fourth {
     display: flex;
     justify-content: space-around;
@@ -180,7 +182,7 @@ section.content-fourth {
     border-radius: 10px;
 }
 
-div.call-action p {
+.call-action > p {
     color:#E5E7EB;
     font-weight: bold;
     font-size: 15px;
@@ -200,8 +202,9 @@ button {
     border: 1px solid #E5E7EB ;
     background-color: #3882F6;
 }
-/* ------------------------------ */
-/* ------- Footer ------- */
+/*-----------------------------------------------------------
+		Footer
+	------------------------------------------------------------*/
 footer {
     display: flex;
     background-color: #1F2937;
@@ -220,4 +223,199 @@ footer p {
     content: ' \00a9';
     color: #E5E7EB;
 }
+/*-------------------------------------------------------------
+		Media queries
+	------------------------------------------------------------*/
+
+    /*-----------------------------------------------------------
+		Screens that are between 992px and 1200px
+        @media (min-width: 992px) and (max-width: 1199.98px)
+	------------------------------------------------------------*/
+    @media (min-width: 992px) and (max-width: 2440px) {
+        /* body {
+            background-color: pink;
+        } */
+
+        figure figcaption {
+            font-size: 18px;
+            /* margin-right:190px; */
+        }
+    }
+
+    /*-----------------------------------------------------------
+		Screens that are 768px and 991px [Tablet]
+	------------------------------------------------------------*/
+    @media (min-width: 768px) and (max-width: 990px) {
+        div.content-right {
+            display: none;
+        }
+
+        div.content-left {
+            width: 100vh;
+            margin: 0px 10px;
+            font-size: 2em;
+        }
+
+        .content-sec-img {
+            display: flex;
+            justify-content: center;
+            flex-wrap:wrap;
+        }
+
+        section.content-second div.content-sec-img {
+            margin: 0px 25px;
+        }
+
+        /* div.content-sec-img figure img {
+            width: 380px;
+            height: 280px;
+        } */
+
+        figure figcaption {
+            font-size: 25px;
+            text-align: center;
+            margin:0px;
+        }
+
+        .quote {
+            font-size: 1em;
+        }
+
+        section.content-fourth {
+            width: 75%;
+            margin: 10px 100px;
+        }
+    }
+    /*-----------------------------------------------------------
+		Screens that are 576px and 767.98px [Mobile]
+	------------------------------------------------------------*/
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        div.content-right {
+            display: none;
+        }
+
+        div.content-left {
+            width: 100vh;
+            margin: 0px 10px;
+            font-size: 1em;
+        }
+
+        div.content-left h1 {
+            font-size: 2em;
+        }
+
+        div.content-left p {
+            font-size: 1em;
+        }
+
+        .content-sec-img {
+            display: flex;
+            justify-content: center;
+            flex-wrap:wrap;
+        }
+
+        /* div.content-sec-img figure img {
+            width: 280px;
+            height: 280px;
+        } */
+
+        section.content-second div.content-sec-img {
+            margin: 0px 25px;
+        }
+
+        figure figcaption {
+            font-size: 18px;
+            margin:5px;
+        }
+
+        .quote {
+            font-size: 1em;
+        }
+
+        section.content-fourth {
+            margin: 0%;
+        }
+
+        .call-action p {
+            font-size: 1em;
+        }
+
+    }
+    /*-----------------------------------------------------------
+		Screens that are min: 400px and max: 575.98px
+    ------------------------------------------------------------*/
+    @media only screen and (min-width: 300px) and (max-width: 575.98px) {
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            font-size: 20px;
+            padding: 7%;
+            margin: 0px 2px 0px;
+        }
+
+        section.content-first {
+            padding: 0px;
+        }
+
+        /* ul li a {
+            padding: 2px 17px 3px;
+            margin: auto;
+        } */
+
+        .logo img{
+            display: none;
+        }
+        
+        div.content-right {
+            display: none;
+        }
+
+        div.content-left {
+            width: 100vh;
+            margin: 0px 10px;
+            font-size: 0.8em;
+        }
+
+        div.content-left h1 {
+            font-size: 1.5em;
+        }
+
+        div.content-left p {
+            font-size: 1em;
+        }
+
+        section > h2 {
+            font-size: 1.5em;
+        }
+
+        .content-sec-img {
+            flex-wrap:wrap;
+        }
+
+        div.content-sec-img figure img {
+            width: 200px;
+            height: 200px;
+        }
+
+        section.content-second div.content-sec-img {
+            margin: 0px 25px;
+        }
+
+        figure figcaption {
+            font-size: 1em;
+        }
+
+        section.content-third {
+            padding: 5%;
+        }
+
+        .quote {
+            font-size: 1em;
+        }
+
+        section.content-fourth {
+            margin: 0px;
+        }
+
+    }
 
