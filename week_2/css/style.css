@@ -120,6 +120,7 @@ figure img {
     height: 200px;
     border-radius: 20%;
     object-fit:cover;
+    border: 3px solid rgb(73, 73, 161);
     /* object-position: right; */
 }
 
