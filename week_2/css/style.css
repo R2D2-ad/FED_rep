@@ -155,13 +155,13 @@ section.content-third {
     color: #1F2937;
 }
 
-div.quote {
+blockquote.quote {
     display: flex;
     justify-content: center;
     flex-direction: column;
 }
 
-div.quote span {
+blockquote.quote span {
     color: #1F2937;
     font-size: 15px;
     font-weight: bold;
