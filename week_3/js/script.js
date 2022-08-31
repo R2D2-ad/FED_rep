@@ -20,30 +20,29 @@ const playRound = (playerSelection, computerSelection) => {
     if (playerSelection === computerSelection){
         return "It\s a Draw!";
     } 
-    else if (playerSelection == "rock"){
-        return (computerSelection == "paper")? "You Win!" : "You Lose!"
+    else if (playerSelection == "paper"){
+        return (computerSelection == "rock")? "You Win!Paper beats rock!" : "You Lose!"
     }
     else if (playerSelection == "scissor"){
-        return (computerSelection == "paper")? "You Win!" : "You Lose!"
+        return (computerSelection == "paper")? "You Win!Scissor beats paper!" : "You Lose!"
     }
     else if (playerSelection == "rock"){
-        return (computerSelection == "scissor")? "You Win!" : "You Lose!"
+        return (computerSelection == "scissor")? "You Win!Rock beats scissor!" : "You Lose!"
     }
 }
 
 const playerSelection = prompt("Please enter your choice here!!").toLowerCase();
 const computerSelection = computerPlay();
-console.log(`Player chose: ${playerSelection}`);
 console.log(`Computer chose: ${computerSelection}`);
+console.log(`Player chose: ${playerSelection}`);
 console.log(playRound(playerSelection,computerSelection));
 
-
-// e.
-const game = (playRound) => {
-    for (let i = 0; i < 5; i++) {
-       console.log("For loop",playRound(),i) ;
-    }
-}
+// let game = () => {
+//     let count = 0;
+//     // for (i=0; i < 3; i++) {
+//     // } 
+// }
+// console.log(game());
 
 
 
