@@ -26,12 +26,12 @@ const game = () => {
     for (i = 0; i < 5; i++) {
         const playerSelection = prompt("Let's play 'Rock - Paper - Scissors'!!").toLowerCase();
         const computerSelection = computerPlay();
-    
+
         console.log(`YOU chose ${playerSelection} while the COMPUTER chose ${computerSelection}.`);
                 
         playRound(playerSelection, computerSelection);
     }
-
+    
     if (scorePlayer > scoreComputer) {
         alert("You win the game!Great job!");
         console.log(`YOURS is ${scorePlayer}, while the score of the COMPUTER is ${scoreComputer}.`);
