@@ -7,10 +7,10 @@ function computerPlay() {
     return choices[Math.floor(Math.random() * choices.length)];
 }
 
-// c.
+// c. playRound() function
 const playRound = (playerSelection, computerSelection) => {
-    if (playerSelection == computerSelection){
-        return "It\s a Draw!";
+    if (playerSelection === computerSelection){
+        return "It\s a tie!";
     } else if (playerSelection === "paper"){
          return (computerSelection === "rock") ? (scorePlayer += 1) : (scoreComputer += 1);
     } else if (playerSelection === "scissor"){
@@ -21,10 +21,9 @@ const playRound = (playerSelection, computerSelection) => {
         return `It\s a tie!`;
     }
 }
-
-// Loop 5 times
+// Game() and loop 5 times
 const game = () => {
-    for (i = 0; i < 2; i++) {
+    for (i = 0; i < 5; i++) {
         const playerSelection = prompt("Let's play 'Rock - Paper - Scissors'!!").toLowerCase();
         const computerSelection = computerPlay();
     
@@ -41,6 +40,7 @@ const game = () => {
             console.log(`The score of the COMPUTER is ${scoreComputer}, while YOURS is ${scorePlayer}.`);
         } else if (scoreComputer === scorePlayer) {
             alert("Its a Tie!Nobody wins!");
+            console.log("It\s a tie! You both chose the same!!");
         }
     }
 }
