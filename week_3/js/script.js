@@ -30,18 +30,17 @@ const game = () => {
         console.log(`YOU chose ${playerSelection} while the COMPUTER chose ${computerSelection}.`);
                 
         playRound(playerSelection, computerSelection);
+    }
 
-        //  result comparison
-        if (scorePlayer > scoreComputer) {
-            alert("You win the game!Great job!");
-            console.log(`YOURS is ${scorePlayer}, while the score of the COMPUTER is ${scoreComputer}.`);
-        } else if (scoreComputer > scorePlayer) {
-            alert("Computer wins the game!");
-            console.log(`The score of the COMPUTER is ${scoreComputer}, while YOURS is ${scorePlayer}.`);
-        } else if (scoreComputer === scorePlayer) {
-            alert("Its a Tie!Nobody wins!");
-            console.log("It\s a tie! You both chose the same!!");
-        }
+    if (scorePlayer > scoreComputer) {
+        alert("You win the game!Great job!");
+        console.log(`YOURS is ${scorePlayer}, while the score of the COMPUTER is ${scoreComputer}.`);
+    } else if (scoreComputer > scorePlayer) {
+        alert("Computer wins the game!");
+        console.log(`The score of the COMPUTER is ${scoreComputer}, while YOURS is ${scorePlayer}.`);
+    } else if (scoreComputer === scorePlayer) {
+        alert("Its a Tie!Nobody wins!");
+        console.log("It\s a tie! You both chose the same!!");
     }
 }
 game();
