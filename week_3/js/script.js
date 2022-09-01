@@ -7,8 +7,6 @@
 // choose[0]:'rock'
 // choose[1]:'paper'
 // choose[2]:'scissors'
-
-
 let scoreComputer = 0;
 let scorePlayer = 0;
 
@@ -35,12 +33,13 @@ const game = () => {
     for (i = 0; i < 2; i++) {
         const playerSelection = prompt("Please enter your choice here!!").toLowerCase();
         const computerSelection = computerPlay();
-
+    
         console.log(`YOU chose ${playerSelection} while the COMPUTER chose ${computerSelection}.`);
         console.log(`The score of the COMPUTER is ${scoreComputer}, while YOURS is ${scorePlayer}.`);
-    }        
-    playRound();
-    
+                
+        playRound(playerSelection, computerSelection);
+    }
+
     //  result comparison
     if (scorePlayer > scoreComputer) {
         alert("You win the game!Great job!");
@@ -51,26 +50,3 @@ const game = () => {
     }
 }
 game();
-
-// const playerSelection = prompt("Please enter your choice here!!").toLowerCase();
-// const computerSelection = computerPlay();
-
-// function game() {
-//     for (i = 0; i < 2; i++) {
-//         const playerSelection = prompt("Please enter your choice here!!").toLowerCase();
-//         const computerSelection = computerPlay();
-        
-//         console.log(`The COMPUTER chose ${computerSelection} and YOU chose ${playerSelection}.`);
-//         console.log(`The score of the COMPUTER is ${scoreComputer}, while YOURS is ${scorePlayer}.`);
-
-//         playRound();
-//     }
-//     if (scorePlayer > scoreComputer) {
-//         alert("You win the game!");
-//     } else if (scoreComputer > scorePlayer) {
-//         alert("Computer wins the game!");
-//     } else {
-//         alert("Its a Tie!");
-//     }
-// }
-// game();
