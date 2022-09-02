@@ -2,6 +2,7 @@
 let scoreComputer = 0;
 let scorePlayer = 0;
 
+
 const computerPlay = () => {
     const choices = ["rock", "paper", "scissor"];
     return choices[Math.floor(Math.random() * choices.length)];
@@ -18,17 +19,17 @@ const playRound = (playerSelection, computerSelection) => {
     } else if (playerSelection === "rock"){
         return (computerSelection === "scissor") ? `You won! Your score is ${scorePlayer += 1}` : `You lost! Computer scored ${scoreComputer += 1}`;
     } else {
-        return "It\'s a tie!";
+        return "Invalid entry, equals to a tie!";
     }
 }
+
 // Game() and loop 5 times
 const game = () => {
     for (i = 0; i < 5; i++) {
-        const playerSelection = prompt("Let's play 'Rock - Paper - Scissors'!!").toLowerCase();
+        const playerSelection = prompt("Let's play 'Rock - Paper - Scissors'!!".toLowerCase());
         const computerSelection = computerPlay();
 
-        console.log(`YOU chose ${playerSelection} while the COMPUTER chose ${computerSelection}.`);
-                
+        console.log(`YOU chose ${playerSelection} while the COMPUTER chose ${computerSelection}.`);             
         playRound(playerSelection, computerSelection);
     }
     
