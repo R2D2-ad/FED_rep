@@ -1,10 +1,10 @@
 // --------------- Rock - Paper - Scissors Game ------------------
 let scoreComputer = 0;
 let scorePlayer = 0;
-
+const choices = ["rock", "paper", "scissor"];
 
 const computerPlay = () => {
-    const choices = ["rock", "paper", "scissor"];
+
     return choices[Math.floor(Math.random() * choices.length)];
 }
 
@@ -26,12 +26,17 @@ const playRound = (playerSelection, computerSelection) => {
 // Game() and loop 5 times
 const game = () => {
     for (i = 0; i < 5; i++) {
-        const playerSelection = prompt("Let's play 'Rock - Paper - Scissors'!!".toLowerCase());
+        let playerSelection = prompt("Let's play 'Rock - Paper - Scissors'!!".toLowerCase());
         const computerSelection = computerPlay();
 
+            while (choices.indexOf(playerSelection) === -1) {
+                playerSelection = prompt("You typed something WRONG! Choose again!!!");
+                playerSelection = prompt("Let's play 'Rock - Paper - Scissors'!!".toLowerCase());
+            }
+
         console.log(`YOU chose ${playerSelection} while the COMPUTER chose ${computerSelection}.`);             
-        playRound(playerSelection, computerSelection);
-    }
+        console.log(playRound(playerSelection, computerSelection));
+    }  
     
     if (scorePlayer > scoreComputer) {
         alert("You win the game!Great job!");
