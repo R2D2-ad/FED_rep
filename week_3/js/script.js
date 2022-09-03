@@ -4,7 +4,6 @@ let scorePlayer = 0;
 const choices = ["rock", "paper", "scissor"];
 
 const computerPlay = () => {
-
     return choices[Math.floor(Math.random() * choices.length)];
 }
 
