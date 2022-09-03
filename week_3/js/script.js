@@ -18,23 +18,24 @@ const playRound = (playerSelection, computerSelection) => {
     } else if (playerSelection === "rock"){
         return (computerSelection === "scissor") ? `You won! Your score is ${scorePlayer += 1}` : `You lost! Computer scored ${scoreComputer += 1}`;
     } else {
-        return "Invalid entry, equals to a tie!";
+        return "Something goes wrong";
     }
 }
 
 // Game() and loop 5 times
 const game = () => {
     for (i = 0; i < 5; i++) {
-        let playerSelection = prompt("Let's play 'Rock - Paper - Scissors'!!".toLowerCase());
+        let playerEntry = prompt("Let's play 'Rock - Paper - Scissors'!!");
+        playerSelection = playerEntry.toLowerCase();
         const computerSelection = computerPlay();
-
-            while (choices.indexOf(playerSelection) === -1) {
-                playerSelection = prompt("You typed something WRONG! Choose again!!!");
-                playerSelection = prompt("Let's play 'Rock - Paper - Scissors'!!".toLowerCase());
-            }
-
-        console.log(`YOU chose ${playerSelection} while the COMPUTER chose ${computerSelection}.`);             
         console.log(playRound(playerSelection, computerSelection));
+        
+        while (choices.indexOf(playerSelection) === -1) {
+            alert("Invalid entry!");
+            playerSelection = prompt("You typed something WRONG! Choose again!!!");
+            console.log(playRound(playerSelection, computerSelection));
+        }
+        console.log(`YOU chose ${playerSelection} while the COMPUTER chose ${computerSelection}.`);
     }  
     
     if (scorePlayer > scoreComputer) {
