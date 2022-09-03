@@ -29,13 +29,15 @@ const game = () => {
         playerSelection = playerEntry.toLowerCase();
         const computerSelection = computerPlay();
         console.log(playRound(playerSelection, computerSelection));
+        console.log(`YOU chose ${playerSelection} while the COMPUTER chose ${computerSelection}.`);
         
         while (choices.indexOf(playerSelection) === -1) {
             alert("Invalid entry!");
-            playerSelection = prompt("You typed something WRONG! Choose again!!!");
+            playerEntry = prompt("You typed something WRONG! Choose again!!!");
+            playerSelection = playerEntry.toLowerCase();
+            // console.log(playerSelection);
             console.log(playRound(playerSelection, computerSelection));
         }
-        console.log(`YOU chose ${playerSelection} while the COMPUTER chose ${computerSelection}.`);
     }  
     
     if (scorePlayer > scoreComputer) {
