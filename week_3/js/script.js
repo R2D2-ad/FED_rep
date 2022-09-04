@@ -22,6 +22,11 @@ const playRound = (playerSelection, computerSelection) => {
     }
 }
 
+let quitG = () => {
+    alert("Quit the game...");
+    return (scorePlayer,scoreComputer);
+}
+
 // Game() and loop 5 times
 const game = () => {
     for (i = 0; i < 5; i++) {
@@ -36,9 +41,10 @@ const game = () => {
             alert("Invalid entry!");
             playerEntry = prompt("You typed something WRONG! Choose again!!!");
             playerSelection = playerEntry.toLowerCase();
+            console.log(playRound(playerSelection, computerSelection));
         }
     }  
-    
+
     if (scorePlayer > scoreComputer) {
         alert("You won the game!Great job!");
         console.log(`YOUR score is ${scorePlayer}, while the score of the COMPUTER is ${scoreComputer}.`);
