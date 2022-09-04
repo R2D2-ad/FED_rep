@@ -22,11 +22,6 @@ const playRound = (playerSelection, computerSelection) => {
     }
 }
 
-let quitG = () => {
-    alert("Quit the game...");
-    return (scorePlayer,scoreComputer);
-}
-
 // Game() and loop 5 times
 const game = () => {
     for (i = 0; i < 5; i++) {
