@@ -28,23 +28,22 @@ const game = () => {
         let playerEntry = prompt("Let's play 'Rock - Paper - Scissors'!!");
         playerSelection = playerEntry.toLowerCase();
         const computerSelection = computerPlay();
+
         console.log(playRound(playerSelection, computerSelection));
-        console.log(`YOU chose ${playerSelection} while the COMPUTER chose ${computerSelection}.`);
+        // console.log(`YOU chose ${playerSelection} while the COMPUTER chose ${computerSelection}.`);
         
         while (choices.indexOf(playerSelection) === -1) {
             alert("Invalid entry!");
             playerEntry = prompt("You typed something WRONG! Choose again!!!");
             playerSelection = playerEntry.toLowerCase();
-            // console.log(playerSelection);
-            console.log(playRound(playerSelection, computerSelection));
         }
     }  
     
     if (scorePlayer > scoreComputer) {
-        alert("You win the game!Great job!");
+        alert("You won the game!Great job!");
         console.log(`YOUR score is ${scorePlayer}, while the score of the COMPUTER is ${scoreComputer}.`);
     } else if (scoreComputer > scorePlayer) {
-        alert("Computer wins the game!");
+        alert("Computer wons the game!");
         console.log(`The score of the COMPUTER is ${scoreComputer}, while YOUR score is ${scorePlayer}.`);
     } else if (scoreComputer === scorePlayer) {
         alert("It\'s a Tie!Nobody wins!");
