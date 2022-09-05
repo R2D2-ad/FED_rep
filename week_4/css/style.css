@@ -1,0 +1,58 @@
+/* ----------------------------------------------------------------
+	STYLESHEET CALCULATOR
+-----------------------------------------------------------------*/
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: url('/fonts/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Roboto-LightItalic';
+    src: url(/fonts/Roboto-LightItalic.ttf) format('truetype');
+    font-weight: lighter;
+}
+
+body {
+    font-family: 'Roboto-Regular',sans-serif;
+}
+/* ----------------------------------------------------------------
+	Main
+-----------------------------------------------------------------*/
+h2 {
+	padding: 15px;
+	margin: 10px 5px 2px;
+}
+
+table {
+	display: table;
+	border-collapse:separate;
+	border: 2px solid #ccc;
+	margin: 15px 25px;
+	width: 40%;
+	height: auto;
+	padding: 1px;
+}
+
+caption {
+	padding: 5px;
+	font-size: 1.2em;
+	background-color: #b9c4d4;
+}
+
+thead, tbody {width: 30%; background-color: #b9c4d4;}
+th.display{
+	background-color: #d9e7d3;
+}
+
+td, th {
+	border: 1px solid black;
+	text-align: center;
+	padding: 5px;
+}
