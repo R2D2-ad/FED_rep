@@ -22,11 +22,12 @@ const clearCell = document.querySelector('.clearBtn');
 clearCell.addEventListener('click',clearCalc);
 
 const backSpace = document.querySelector('.backSBtn');
+[backSpace].forEach(td => td.addEventListener('click', () => bcSpace()));
 
-// Handle the table data (td) with numbers
+// Handle the table data (td) with the numbers
 numBtn.forEach(td => td.addEventListener('click',()=> {
     cellNum = td.textContent;
-    displayResults.textContent = cellNum; 
+    displayResults.textContent = cellNum;
     // console.log(cellNum);
     // console.log(typeof(cellNum));
     handleNum (cellNum);
@@ -51,7 +52,7 @@ function handleNum (cellNum) {
 mathOpr.forEach(td => td.addEventListener('click',()=> {
     cellOper = td.textContent;
     displayResults.textContent = cellOper;
-    console.log("celloperator",cellOper);
+    // console.log("celloperator",cellOper);
     handleOper (cellOper);
 }));
 handleOper = (cellOper) => {
@@ -70,6 +71,7 @@ handleOper = (cellOper) => {
             previousDisplayR.textContent = prDisNum + " " + operator;
     }
 }
+
 // Check the operator
 operCheck = (txt) => {
     operator = txt;
@@ -99,10 +101,12 @@ calculate = () => {
     prDisNum = prDisNum.toString();
     results();
 }
+
 // Round the number
 const roundTheNum = (num) => {
     return Math.round(num*100)/100;
 }
+
 //  The result of the caclulator function
 const results = () => {
     previousDisplayR.textContent = "";
@@ -127,5 +131,15 @@ const addDecimal = () => {
         displayResults.textContent =disNum;
     }
 };
+
+// Backspace handling
+const bcSpace = () => {
+    if (disNum !== "") {
+        disNum = disNum.slice(0, -1);
+        console.log(disNum);
+        displayResults.textContent = disNum;
+    }
+};
+
 
 

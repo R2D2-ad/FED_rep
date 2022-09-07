@@ -1,41 +1,95 @@
 /* ----------------------------------------------------------------
 	STYLESHEET CALCULATOR
 -----------------------------------------------------------------*/
+body {
+	/* background-image: url('/week_4/img/calc1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover; */
+}
 /* ----------------------------------------------------------------
 	Main
 -----------------------------------------------------------------*/
 h2 {
-	padding: 15px;
-	margin: 10px 5px 2px;
+	padding: 20px;
+	margin: 30px 5px 20px;
+	/* text-align: center; */
+}
+
+#content {
+	display: flex;
+	align-items: center;
+	padding: 5px 16px;
 }
 
 table {
 	display: table;
 	border-collapse:separate;
-	border: 2px solid #ccc;
-	margin: 15px 25px;
-	width: 40%;
-	height: auto;
+	border: 2px solid rgb(109, 51, 51);
+	margin: 75px 80px 50px;
+	width: 25%;
+
 }
 
 caption {
 	padding: 5px;
 	font-size: 1.2em;
-	background-color: #b9c4d4;
-	border: 2px solid #ccc;
+	background-color: #d6a97f;
+	border: 2px solid rgb(109, 51, 51);
 }
 
 thead, tbody {width: 30%; background-color: #b9c4d4;}
 th.displayCurrent{
-	background-color: #d9e7d3;
+	background-color: #69b947;
 }
 
 th.previousDisplay {
-	background-color: #d9e7d3;
+	background-color: #b6e2a4;
 }
 
 td, th {
-	border: 1px solid black;
+	border: 1px solid rgb(130, 136, 54);
 	text-align: center;
 	padding: 5px;
+	background-color: rgb(200, 214, 118);
 }
+
+td.backSBtn {
+	background-color: #a3bbe7;
+}
+
+td.clearBtn {
+	background-color: rgb(178, 238, 218);
+}
+
+ /*-----------------------------------------------------------
+		Screens that are 768px and 991.98px [Tablet]
+	------------------------------------------------------------*/
+	@media (min-width: 768px) and (max-width: 991.98px) {
+		table {
+			width: 50%;
+		}
+	}
+
+/*-----------------------------------------------------------
+		Screens that are 576px and 767.98px [Mobile]
+	------------------------------------------------------------*/
+    @media (min-width: 576px) and (max-width: 767.98px) {
+		table {
+			width: 50%;
+		}
+	}
+
+/*-----------------------------------------------------------
+		Screens that are min: 300px and max: 575.98px
+    ------------------------------------------------------------*/
+    @media only screen and (min-width: 300px) and (max-width: 575.98px) {
+		table {
+			width: 50%;
+			margin: 15px;
+		}
+
+		h2{
+			font-size: 20px;
+			padding: 10px;
+		}
+	}
