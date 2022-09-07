@@ -5,9 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+
     <!-- JavaScript
 	============================================= -->
     <script type="text/javascript" src="./js/calc.js" defer></script>
+    <script type="text/javascript" src="./js/addStyle.js" defer></script>
+    <!-- <script type="text/javascript" src="./js/calc_warmup.js" defer></script> -->
+
     <!-- Stylesheets
 	============================================= -->
     <link rel="stylesheet" href="./css/style.css">
@@ -19,34 +23,38 @@
         <table><caption>Calculator</caption>
             <thead>
                 <tr>
-                    <th colspan="3" class="display">results</th>
-                    <th class="clearBtn">C</th>
+                    <th colspan="3" class="previousDisplay" ></th>
+                    <td class="clearBtn"  data-key="8">C</td> 
+                </tr>
+                <tr>
+                    <th rowspan="2" colspan="3" class="displayCurrent">result</th>
+                    <td class="backSBtn"  data-key="8">Backspace</td> 
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>2</td>
-                    <td>3</td>
-                    <td>/</td>
+                    <td class="theNum">1</td>
+                    <td class="theNum">2</td>
+                    <td class="theNum">3</td>
+                    <td class="theMath">/</td>
                 </tr>
                 <tr>
-                    <td>4</td>
-                    <td>5</td>
-                    <td>6</td>
-                    <td>*</td>
+                    <td class="theNum">4</td>
+                    <td class="theNum">5</td>
+                    <td class="theNum">6</td>
+                    <td class="theMath">*</td>
                 </tr>
                 <tr>
-                    <td>7</td>
-                    <td>8</td>
-                    <td>9</td>
-                    <td>-</td>
+                    <td class="theNum">7</td>
+                    <td class="theNum">8</td>
+                    <td class="theNum">9</td>
+                    <td class="theMath">-</td>
                 </tr>
                 <tr>
-                    <td>0</td>
-                    <td>.</td>
-                    <td>=</td>
-                    <td>+</td>
+                    <td class="theNum">0</td>
+                    <td class="theDecimal">.</td>
+                    <td class="theEqual">=</td>
+                    <td class="theMath">+</td>
                 </tr>
             </tbody>
         </table>
