@@ -19,19 +19,38 @@ const displayResults = document.querySelector('.displayCurrent');
 const previousDisplayR = document.querySelector('.previousDisplay');
 
 const clearCell = document.querySelector('.clearBtn');
-clearCell.addEventListener('click',clearCalc);
+clearCell.addEventListener('click', () => {
+    clearCalc ();
+    remove_active ();
+});
 
 const backSpace = document.querySelector('.backSBtn');
-[backSpace].forEach(td => td.addEventListener('click', () => bcSpace()));
+[backSpace].forEach(td => td.addEventListener('click', () => {
+    remove_active ();
+    bcSpace()
+}));
 
-// Handle the table data (td) with the numbers
-numBtn.forEach(td => td.addEventListener('click',()=> {
+ /*-------------------------------------------------------------
+		Class active set up
+	------------------------------------------------------------*/
+const remove_active = () => {
+    numBtn.forEach(td => {
+        td.classList.remove("active");});
+};
+ /*-------------------------------------------------------------
+		Numbers table data set up
+	------------------------------------------------------------*/
+numBtn.forEach(td => td.addEventListener('click',() => {
+    remove_active();
     cellNum = td.textContent;
     displayResults.textContent = cellNum;
-    // console.log(cellNum);
-    // console.log(typeof(cellNum));
     handleNum (cellNum);
 }));
+
+numBtn.forEach(td => td.addEventListener('click', (e) => {
+    e.target.classList.add("active");
+}));
+
 function handleNum (cellNum) {
     switch (true) {
         case prDisNum !== "" && disNum !== "" && operator === "":
@@ -47,12 +66,13 @@ function handleNum (cellNum) {
         break;
     }
 }
-
-// Handle the table data (td) with the operators
+ /*-------------------------------------------------------------
+		Operators table data set up
+	------------------------------------------------------------*/
 mathOpr.forEach(td => td.addEventListener('click',()=> {
+    remove_active();
     cellOper = td.textContent;
     displayResults.textContent = cellOper;
-    // console.log("celloperator",cellOper);
     handleOper (cellOper);
 }));
 handleOper = (cellOper) => {
@@ -72,15 +92,16 @@ handleOper = (cellOper) => {
     }
 }
 
-// Check the operator
-operCheck = (txt) => {
-    operator = txt;
+operCheck = (cellOper) => {
+    operator = cellOper;
     previousDisplayR.textContent = prDisNum + " " + operator;
     displayResults.textContent = "0";
     disNum = "";
 }
 
-// Calculate
+ /*-------------------------------------------------------------
+		Calculation set up
+	------------------------------------------------------------*/
 calculate = () => {
     prDisNum = Number(prDisNum);
     disNum = Number(disNum);
@@ -92,8 +113,12 @@ calculate = () => {
     } else if (operator === "*"){
         prDisNum *= disNum;
     } else if (operator === "/"){
-        if (disNum === 0){
-            alert("Error");
+        if (disNum <= 0){
+            // alert("Error");
+            prDisNum = "Error!";
+            previousDisplayR.textContent = "";
+            displayResults.textContent = prDisNum;
+            return;
         }
         prDisNum /= disNum;
     }
@@ -106,8 +131,6 @@ calculate = () => {
 const roundTheNum = (num) => {
     return Math.round(num*100)/100;
 }
-
-//  The result of the caclulator function
 const results = () => {
     previousDisplayR.textContent = "";
     displayResults.textContent = prDisNum;
@@ -115,7 +138,9 @@ const results = () => {
     disNum = "";
 };
 
-// The "C"- clear table data setting
+ /*-------------------------------------------------------------
+		The "Clear" button set up
+	------------------------------------------------------------*/
 function clearCalc() {
     disNum ="";
     prDisNum = "";
@@ -124,7 +149,9 @@ function clearCalc() {
     previousDisplayR.textContent = "";
 };
 
-//  Handling the decimals
+ /*-------------------------------------------------------------
+		The decimal button set up
+	------------------------------------------------------------*/
 const addDecimal = () => {
     if(!disNum.includes('.')){
         disNum += '.';
@@ -132,7 +159,9 @@ const addDecimal = () => {
     }
 };
 
-// Backspace handling
+ /*-------------------------------------------------------------
+		The backspace button set up
+	------------------------------------------------------------*/
 const bcSpace = () => {
     if (disNum !== "") {
         disNum = disNum.slice(0, -1);
