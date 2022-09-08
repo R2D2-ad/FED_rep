@@ -10,10 +10,16 @@ const numBtn = document.querySelectorAll('.theNum');
 const mathOpr = document.querySelectorAll('.theMath'); 
 
 const decimal = document.querySelectorAll('.theDecimal');
-decimal.forEach(td => td.addEventListener('click',()=> {addDecimal();}));
+decimal.forEach(td => td.addEventListener('click',()=> {
+    addDecimal();
+    remove_active();
+}));
 
 const equal = document.querySelectorAll('.theEqual');
-equal.forEach(td => td.addEventListener('click', () => calculate()));
+equal.forEach(td => td.addEventListener('click', () => {
+    calculate();
+    remove_active();
+}));
 
 const displayResults = document.querySelector('.displayCurrent'); 
 const previousDisplayR = document.querySelector('.previousDisplay');
