@@ -19,7 +19,7 @@ decimal.forEach(td => td.addEventListener('click',()=> {
 
 const equal = document.querySelectorAll('.theEqual');
 equal.forEach(td => td.addEventListener('click', () => {
-    if (disNum != "" && prDisNum != ""){
+    if (disNum !== "" && prDisNum !== ""){
         calculate();
     }
     remove_active();
