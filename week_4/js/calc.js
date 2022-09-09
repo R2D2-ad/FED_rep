@@ -7,7 +7,9 @@ let prDisNum = "";  // previous display value
 let operator = "";
 
 const numBtn = document.querySelectorAll('.theNum'); 
-const mathOpr = document.querySelectorAll('.theMath'); 
+const mathOpr = document.querySelectorAll('.theMath');
+
+window.addEventListener('keydown', keyPresHandler, false);
 
 const decimal = document.querySelectorAll('.theDecimal');
 decimal.forEach(td => td.addEventListener('click',()=> {
@@ -17,7 +19,9 @@ decimal.forEach(td => td.addEventListener('click',()=> {
 
 const equal = document.querySelectorAll('.theEqual');
 equal.forEach(td => td.addEventListener('click', () => {
-    calculate();
+    if (disNum != "" && prDisNum != ""){
+        calculate();
+    }
     remove_active();
 }));
 
@@ -122,8 +126,7 @@ calculate = () => {
         if (disNum <= 0){
             // alert("Error");
             prDisNum = "Error!";
-            previousDisplayR.textContent = "";
-            displayResults.textContent = prDisNum;
+            results();
             return;
         }
         prDisNum /= disNum;
@@ -148,7 +151,7 @@ const results = () => {
 		The "Clear" button set up
 	------------------------------------------------------------*/
 function clearCalc() {
-    disNum ="";
+    disNum = "";
     prDisNum = "";
     operator = "";
     displayResults.textContent = "0";
@@ -161,7 +164,7 @@ function clearCalc() {
 const addDecimal = () => {
     if(!disNum.includes('.')){
         disNum += '.';
-        displayResults.textContent =disNum;
+        displayResults.textContent = disNum;
     }
 };
 
@@ -169,12 +172,46 @@ const addDecimal = () => {
 		The backspace button set up
 	------------------------------------------------------------*/
 const bcSpace = () => {
+    prDisNum = prDisNum.toString();
+    disNum = disNum.toString();
     if (disNum !== "") {
         disNum = disNum.slice(0, -1);
-        console.log(disNum);
+        // console.log(disNum);
         displayResults.textContent = disNum;
+        if (disNum === "") {
+            displayResults.textContent = "0";
+        };
     }
+    if (disNum === "" && prDisNum !== "" && operator === "") {
+        prDisNum = prDisNum.slice(0, -1);
+        displayResults.textContent = prDisNum;
+    }
+}
+
+/*-------------------------------------------------------------
+		The keyboard button set up
+	------------------------------------------------------------*/
+function keyPresHandler (e) {
+    e.preventDefault();
+    if (e.key >= 0 && e.key <=9) {
+        handleNum(e.key);
+    }
+    if (e.key === "Enter" || (e.key === "=" && disNum !== "" && prDisNum !== "")) {
+        calculate();
+    }
+    if (e.key === "+" || e.key === "-" || e.key === "/") {
+        handleOper(e.key);
+    }
+    if (e.key === "*") {
+        handleOper("*");
+    }
+    if (e.key === ".") {
+        addDecimal();
+    }
+    if (e.key === "Backspace") {
+        bcSpace();
+    }
+    if (e.key === "Clear") {
+        clearCalc();
+    }    
 };
-
-
-

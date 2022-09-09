@@ -2,11 +2,18 @@
 	STYLESHEET CALCULATOR
 -----------------------------------------------------------------*/
 /* ----------------------------------------------------------------
+	Body
+-----------------------------------------------------------------*/
+body {
+	background-image: url('/week_4/img/calc3.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+/* ----------------------------------------------------------------
 	Main
 -----------------------------------------------------------------*/
 h2 {
-	padding: 10px;
-	margin: 3px 5px;
+	padding: 3px 35px;
 	text-align: center;
 }
 
@@ -25,11 +32,11 @@ table {
 }
 
 caption {
-	padding: 5px;
+	padding: 13px;
 	font-size: 1.2em;
 	background-color: #dfc6d9;
 	/* border: 1px solid rgb(108, 79, 110); */
-	border-radius: 15%;
+	border-radius: 1%;
 }
 
 thead, tbody {width: 30%; background-color: #b9c4d4;}
@@ -46,7 +53,7 @@ td, th {
 
 .theNum {
 	font-size: 1em;
-	padding: 17px 30px;
+	padding: 18px 35px;
 	font-weight: 700;
 	border-radius: 20%;
 	background-color: rgb(204, 171, 197);
