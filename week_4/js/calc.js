@@ -62,6 +62,7 @@ numBtn.forEach(td => td.addEventListener('click', (e) => {
 }));
 
 function handleNum (cellNum) {
+  
     switch (true) {
         case prDisNum !== "" && disNum !== "" && operator === "":
             prDisNum = "";
@@ -72,6 +73,10 @@ function handleNum (cellNum) {
     switch (true) {
         case disNum.length <= 11:
             disNum += cellNum;
+              if (disNum.startsWith("0") && disNum.length === 2) {
+                disNum = cellNum;
+            return;        
+            }
             displayResults.textContent = disNum;
         break;
     }
