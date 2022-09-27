@@ -1,4 +1,3 @@
-# FED_rep
-# Rock - Paper - Scissor Game
+# <sub>FED_rep</sub>
+# <sub><sup>Rock - Paper - Scissor Game:<sup></sub> <sub><sup>https://r2d2-ad.github.io/FED_rep/week_3/</sup></sub> 
 
-https://r2d2-ad.github.io/FED_rep/week_3/
